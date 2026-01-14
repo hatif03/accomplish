@@ -496,7 +496,7 @@ describe('SettingsDialog Integration', () => {
 
       // Assert
       await waitFor(() => {
-        const option = screen.getByRole('option', { name: /gpt-4o \(no api key\)/i });
+        const option = screen.getByRole('option', { name: /GPT 5\.2 \(No API key\)/i });
         expect(option).toBeDisabled();
       });
     });
@@ -546,7 +546,7 @@ describe('SettingsDialog Integration', () => {
 
     it('should show warning when selected model has no API key', async () => {
       // Arrange - Selected OpenAI model but no OpenAI key
-      mockGetSelectedModel.mockResolvedValue({ provider: 'openai', model: 'openai/gpt-4o' });
+      mockGetSelectedModel.mockResolvedValue({ provider: 'openai', model: 'openai/gpt-5.2' });
       mockGetApiKeys.mockResolvedValue([
         { id: 'key-1', provider: 'anthropic', keyPrefix: 'sk-ant-...' },
       ]);

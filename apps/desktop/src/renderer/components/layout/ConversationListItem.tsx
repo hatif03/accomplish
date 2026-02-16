@@ -44,7 +44,7 @@ export default function ConversationListItem({ task }: ConversationListItemProps
       case 'failed':
         return <XCircle className="h-3 w-3 text-red-500 shrink-0" />;
       case 'cancelled':
-        return <Square className="h-3 w-3 text-zinc-400 shrink-0" />;
+        return <Square className="h-3 w-3 text-muted-foreground shrink-0" />;
       case 'interrupted':
         return <PauseCircle className="h-3 w-3 text-amber-500 shrink-0" />;
       case 'queued':
@@ -80,7 +80,7 @@ export default function ConversationListItem({ task }: ConversationListItemProps
         className={cn(
           'opacity-0 group-hover:opacity-100 transition-opacity duration-200',
           'p-1 rounded hover:bg-red-100 dark:hover:bg-red-900/20',
-          'text-zinc-400 hover:text-red-600 dark:hover:text-red-400',
+          'text-muted-foreground hover:text-red-600 dark:hover:text-red-400',
           'shrink-0'
         )}
         aria-label="Delete task"
